@@ -65,7 +65,7 @@ Ejecute el comando correspondiente a la tarea deseada.
 
 ## Uso
 
-1. Para buscar, indique la ruta de una carpeta y el texto. El programa informa el archivo y la página de cada coincidencia. Pulse Esc para cancelar.
+1. Para buscar, indique la ruta de una carpeta y el texto. El programa informa el archivo y la página de cada coincidencia. Pulse Esc para cancelar la búsqueda actual y escriba otra palabra o frase para iniciar una nueva búsqueda. Al terminar una búsqueda también puede buscar otro texto; deje la entrada vacía para salir.
 2. Para dividir, indique la ruta del PDF, la cantidad de páginas por parte y un nombre base. Los archivos se crean en `salida` junto al PDF original; si ya existe un destino, el programa se detiene para evitar sobrescribirlo.
 
 ## Estructura del proyecto

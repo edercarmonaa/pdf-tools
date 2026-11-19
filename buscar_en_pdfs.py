@@ -32,18 +32,7 @@ def mensaje(texto):
     print('\r' + ' ' * 75 + '\r' + texto, flush=True)
 
 
-def main():
-    print('BUSCADOR DE TEXTO EN PDF')
-    ruta = input('Ruta de la carpeta con archivos PDF: ').strip().strip('"').strip("'")
-    if not ruta:
-        raise ValueError('Indique una carpeta.')
-    carpeta = Path(ruta)
-    if not carpeta.is_dir():
-        raise ValueError('La carpeta indicada no existe.')
-    texto = input('Texto a buscar: ').strip()
-    if not texto:
-        raise ValueError('El texto a buscar no puede estar vacío.')
-
+def buscar(carpeta, texto):
     archivos = sorted((p for p in carpeta.iterdir() if p.is_file() and p.suffix.lower() == '.pdf'), key=lambda p: p.name.casefold())
     if not archivos:
         print('No se encontraron archivos PDF en la carpeta.')
@@ -91,6 +80,22 @@ def main():
         print('No se encontraron coincidencias en las hojas revisadas.')
     print(f'Archivos procesados: {completados} de {len(archivos)}. Hojas con coincidencias: {coincidencias}. Errores: {errores}.')
     print('Nota: los PDF escaneados sin texto reconocible requieren OCR.')
+
+
+def main():
+    print('BUSCADOR DE TEXTO EN PDF')
+    ruta = input('Ruta de la carpeta con archivos PDF: ').strip().strip('"').strip("'")
+    if not ruta:
+        raise ValueError('Indique una carpeta.')
+    carpeta = Path(ruta)
+    if not carpeta.is_dir():
+        raise ValueError('La carpeta indicada no existe.')
+
+    while True:
+        texto = input('\nTexto a buscar (deje vacío para salir): ').strip()
+        if not texto:
+            break
+        buscar(carpeta, texto)
 
 
 if __name__ == '__main__':
