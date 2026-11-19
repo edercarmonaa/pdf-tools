@@ -99,7 +99,7 @@ Prototipo de utilidades de consola. Se ha verificado con Python 3.13; no se incl
 - La b?squeda depende del texto extra?ble del PDF. Los documentos escaneados sin OCR requieren reconocimiento de texto previo.
 - Los PDF cifrados que requieren contrase?a no se procesan.
 - El buscador requiere Windows; no se ha verificado el divisor en otros sistemas.
-- No hay suite automatizada, configuraci?n de CI ni licencia incluida.
+- No hay suite automatizada ni configuraci?n de CI.
 
 ## Pr?ximas mejoras
 
@@ -111,4 +111,4 @@ Cuando exista un repositorio p?blico, cree un fork y una rama, realice cambios a
 
 ## Licencia
 
-Este proyecto todav?a no incluye un archivo de licencia.
+Distribuido bajo la [licencia MIT](LICENSE). El titular de los derechos debe completarse en el archivo de licencia.
