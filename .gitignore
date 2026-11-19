@@ -1,0 +1,52 @@
+# Documentos de entrada y resultados: pueden contener informaci?n privada
+*.pdf
+*.xlsx
+*.xls
+salida/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Configuraci?n local y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account.json
+secrets.json
+auth.json
+
+# Datos y archivos temporales
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+*.bak
+*.backup
+*.old
+*.log
+
+# Copias comprimidas y ejecutables locales
+*.zip
+*.rar
+*.7z
+*.exe
+id_rsa
+id_ed25519
+firebase-adminsdk*.json
+secrets.yml
+secrets.yaml
